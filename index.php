@@ -1,14 +1,7 @@
 <?php
 
 /**
-<<<<<<< HEAD
  * Carrega a conexão com o banco de dados.
-=======
- * Inclui o arquivo de conexão com o banco de dados.
- *
- * __DIR__ retorna o diretório atual do arquivo,
- * o que evita problemas de caminho relativo.
->>>>>>> 4e9339113163cc35dc37de6769f47e0a188ef372
  */
 require __DIR__ . "/connect.php";
 
@@ -24,36 +17,41 @@ $pdo = Connect::getInstance();
 
 <head>
     <meta charset="UTF-8">
-    <title>CRUD PHP</title>
+    <title>Cadastro de Alunos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-light">
 
-    <h1>Cadastro de Alunos</h1>
+    <div class="container mt-5">
 
+    <h1 class="mb-4">Cadastro de Alunos</h1>
+
+<div class="card p-4 shadow-sm">
     <!-- Formulário de cadastro de alunos -->
     <form action="store.php" method="post">
         <p>
-            <label>Nome:</label><br>
-            <input type="text" name="name" required>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" class="form-control" required>
         </p>
 
         <p>
             <label>E-mail:</label><br>
-            <input type="email" name="email" required>
+            <input type="email" name="email" class="form-control" required>
         </p>
 
         <p>
             <label>Curso:</label><br>
-            <input type="text" name="document" required>
+            <input type="text" name="document" class="form-control" required>
         </p>
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit" class="btn btn-primary mt-3">Cadastrar</button>
 
-<!-- Link para acessar a listagem de alunos -->
-        <p><a href="lista.php">Ir para lista de alunos cadastrados</a></p>
+        <!-- Link para acessar a listagem de alunos -->
+        <p class="mt-3 mb-0"><a href="lista.php">Ir para lista de alunos cadastrados</a></p>
     </form>
-
+</div>
+</div>
 </body>
 
 </html>

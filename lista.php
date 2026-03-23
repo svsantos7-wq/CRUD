@@ -28,16 +28,19 @@ $users = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <title>Lista de alunos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-light">
+    <div class="container mt-5">
 
-    <h1>Lista de alunos</h1>
+    <h1 class="mb-4">Lista de alunos</h1>
 
-    <p><a href="index.php">Cadastrar novo aluno</a></p>
+    <p><a href="index.php" class="btn btn-success mb-3">Cadastrar novo aluno</a></p>
 
 <!-- Tabela de listagem dos alunos -->
-    <table cellpadding="10">
+<div class="card p-3 shadow-sm">
+    <table class="table table-striped table-hover mt-4">
         <thead>
             <tr>
                 <th>ID</th>
@@ -59,8 +62,8 @@ $users = $stmt->fetchAll();
                     <td><?= htmlspecialchars($user["document"]) ?></td>
                     <td><?= date("d/m/Y H:i", strtotime($user["created_at"])) ?></td>
                     <td>
-                        <a href="edit.php?id=<?= $user["id"] ?>">Editar</a> |
-                        <a href="delete.php?id=<?= $user["id"] ?>" onclick="return confirm('Tem certeza que deseja excluir este aluno?')">Excluir</a>
+                        <a href="edit.php?id=<?= $user["id"] ?>" class="btn btn-sm btn-warning me-2">Editar</a>
+                        <a href="delete.php?id=<?= $user["id"] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza que deseja excluir este aluno?')">Excluir</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -71,7 +74,8 @@ $users = $stmt->fetchAll();
             </tr>
         </tfoot>
     </table>
-
+</div>
+    </div>
 </body>
 
 </html>
