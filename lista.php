@@ -29,9 +29,10 @@ $users = $stmt->fetchAll();
     <meta charset="UTF-8">
     <title>Lista de alunos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-light">
+<body>
     <div class="container mt-5">
 
     <h1 class="mb-4">Lista de alunos</h1>
