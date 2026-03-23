@@ -10,6 +10,11 @@ require __DIR__ . "/connect.php";
  */
 $pdo = Connect::getInstance();
 
+/**
+ * Verifica se o cadastro foi realizado com sucesso.
+ */
+$success = filter_input(INPUT_GET, "success", FILTER_VALIDATE_INT);
+
 ?>
 
 <!DOCTYPE html>
@@ -56,5 +61,10 @@ $pdo = Connect::getInstance();
             </form>
         </div>
     </div>
+    <?php if ($success) : ?>
+        <script>
+            alert("Cadastro realizado com sucesso!");
+        </script>
+<?php endif; ?>
 </body>
 </html>

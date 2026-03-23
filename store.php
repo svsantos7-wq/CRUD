@@ -54,7 +54,7 @@ $stmt->execute([
 /**
  * Redireciona o usuário para a página principal após o cadastro.
  */
-header("Location: index.php");
+header("Location: index.php?success=1");
 
 /**
  * Encerra a execução do script após o redirecionamento.
