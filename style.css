@@ -48,8 +48,22 @@ h1 {
 }
 
 .btn-success {
-    background-color: #00b894;
+    background-color: #588157;
     border: none;
+    color: white;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 12px;
+
+    /* destaque */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: 0.2s;
+}
+
+.btn-success:hover {
+    background-color: #3a5a40;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
 /* Tabela */

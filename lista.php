@@ -37,7 +37,7 @@ $users = $stmt->fetchAll();
 
     <h1 class="mb-4">Lista de alunos</h1>
 
-    <p><a href="index.php" class="btn btn-success mb-3">Cadastrar novo aluno</a></p>
+    <p><a href="index.php" class="btn btn-success mb-3">+ Cadastrar novo aluno</a></p>
 
 <!-- Tabela de listagem dos alunos -->
 <div class="card p-3 shadow-sm">
