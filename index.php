@@ -1,7 +1,14 @@
 <?php
 
 /**
+<<<<<<< HEAD
  * Carrega a conexão com o banco de dados.
+=======
+ * Inclui o arquivo de conexão com o banco de dados.
+ *
+ * __DIR__ retorna o diretório atual do arquivo,
+ * o que evita problemas de caminho relativo.
+>>>>>>> 4e9339113163cc35dc37de6769f47e0a188ef372
  */
 require __DIR__ . "/connect.php";
 
